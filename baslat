@@ -1,0 +1,71 @@
+#!/bin/bash
+#Code: THTalb4y
+
+bash .kurulum
+clear
+echo -e '\033[31;40;1m 
+        ─────█─▄▀█──█▀▄─█─────
+        ────▐▌──────────▐▌────
+        ────█▌▀▄──▄▄──▄▀▐█────
+        ───▐██──▀▀──▀▀──██▌───
+        ──▄████▄──▐▌──▄████▄──
+
+              Sürüm: 0.6.7 (Final)
+            Code  : Sparkly
+           Github : @sparkly0
+       Tüm Sorumluluk Size Aittir.
+	
+     ☪  ☪  ☪  Türk DDos Hammer  ☪  ☪ ☪  	
+
+             \e[32m[1]\e[33mGüncelle	
+             \e[32m[2]\e[33mKaldır
+             \e[32m[3]\e[33mSaldır
+             \e[32m[5]\e[33mÇıkış
+
+	'
+	
+	
+
+
+read -p "İşlem Numarası: " islem
+if [[ $islem == 1 || $islem == 01 ]]; then
+        echo -e "\033[36;40;1m Tool Güncelleniyor.. Az Bekle.."
+        cd ..
+        rm -rf ddos
+        git clone https://www.github.com/thtalb4y/ddos &> /dev/null
+        cd ddos
+        chmod 777 saldırı.py
+        rm .kurulum
+        rm README.md
+        rm .gittignore
+        echo -e Tool Başarıyla Güncellendi!
+        sleep 1
+        clear
+        bash baslat
+
+elif [[ $islem == 2 || $islem == 02 ]]; then
+        cd ..
+        rm -rf ddos
+echo -e '\033[36;40;1m Kaldırma Başarılı Lütfen Yeniden Başlatın....'
+        sleep 1
+
+#menu 3
+elif [[ $islem == 3 || $islem == 03 ]]; then
+        clear
+        python saldırı.py
+
+#menu 4
+elif [[ $islem == 4 || $islem == 05 ]]; then
+        exit
+        sleep 1
+        
+        
+else   
+	clear
+echo -e "\033[36;40;1m İşlem Numarasını Kontrol Ediniz...."
+	sleep 1
+	clear 
+	bash baslat
+fi
+
+#End

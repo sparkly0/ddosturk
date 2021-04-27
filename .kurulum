@@ -1,0 +1,39 @@
+# spinner
+spinlong ()
+{
+    bar=" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    barlength=${#bar}
+    i=0
+    while ((i < 100)); do
+        n=$((i*barlength / 100))
+        printf "\e[00;32m\r[%-${barlength}s]\e[00m" "${bar:0:n}"
+        ((i += RANDOM%5+2))
+        sleep 0.02
+    done
+}
+
+clear
+apt update -y
+clear
+apt upgrade -y
+echo -e echo -e "\033[31;40;1m Depolar Güncellendi"
+clear
+echo -e "\033[31;40;1m Python Yükleniyor. Sabırlı Olun.."
+pkg install python -y &> /dev/null
+spinlong
+clear
+echo -e "\033[31;40;1m Python2 Yükleniyor. Sabırlı Olun.."
+pkg install python2 -y &> /dev/null
+pkg install python3 -y &> /dev/null
+spinlong
+clear
+echo -e "\033[31;40;1m Dnsutils Yükleniyor. Az Bekle.."
+pkg install dnsutils -y &> /dev/null
+spinlong
+clear
+echo -e "\033[31;40;1m Kurulum Başarıyla Tamamlandı."
+sleep 2
+rm README.md
+rm .kurulum
+rm .gittignore
+chmod 777 saldırı.py
