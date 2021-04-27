@@ -1,2 +1,2 @@
 # ddosturk
-Türk DDos Aracı
+Eğitim Amaçlı Hazırlanmıştır. Tüm Sorumluluk Kullanıcıya Aittir.
